@@ -6,7 +6,7 @@ const dotenv = require('dotenv').config();
 const dbURL = process.env.DATABASE_URL;
 
 
-const app = express();
+const app = express()
 
 app.use(express.json())//whenever you get data from front it converts to json
 app.use(cors()); //fixes tons of issues of api requets from front end
