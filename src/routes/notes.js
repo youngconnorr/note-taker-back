@@ -10,7 +10,7 @@ router.get("/", async(req,res) => {
         const response = await NotesModel.find({}); // goes through model finding what is requesting for response
         res.json(response)
     } catch(error) {
-        res.json(err);
+        res.json(error);
     }
 })
 
@@ -21,7 +21,7 @@ router.post("/", async(req,res) => {
         const response = await note.save(); // goes through model finding what is requesting for response
         res.json(response)
     } catch(error) {
-        res.json(err);
+        res.json(error);
     }
 })
 
@@ -34,7 +34,7 @@ router.put("/", async(req,res) => {
         res.json({savedRecipes: user.savedRecipes});
 
     } catch(error) {
-        res.json(err);
+        res.json(error);
     }
 })
 
