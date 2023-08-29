@@ -31,7 +31,7 @@ router.put("/", async(req,res) => {
         const user = await UserModel.findById(req.body.userID)  //grabbing note id and user id, pushing note id into user id
         user.savedNotes.push(note);
         await user.save()
-        res.json({savedRecipes: user.savedRecipes});
+        res.json({savedNotes: user.savedNotes});
 
     } catch(error) {
         res.json(error);
